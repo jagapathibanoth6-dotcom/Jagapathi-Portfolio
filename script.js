@@ -49,8 +49,8 @@
     const resize = () => {
       W = innerWidth; H = innerHeight;
       net.width = W * dpr; net.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.round(Math.max(28, Math.min(95, (W * H) / 15000)));
-      pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3, r: Math.random() * 1.5 + .7 }));
+      const n = Math.round(Math.max(70, Math.min(200, (W * H) / 7000)));
+      pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3, r: Math.random() * 1.8 + .9 }));
     };
     resize();
     window.addEventListener('resize', resize);
@@ -66,7 +66,7 @@
       target = v ? v.split(',').map(Number) : [74, 222, 155];
     };
     window.addEventListener('scroll', pickColour, { passive: true }); pickColour();
-    const LINK = 125, MLINK = 190;
+    const LINK = 140, MLINK = 230;
     const frame = () => {
       requestAnimationFrame(frame);
       if (document.hidden) return;
@@ -76,7 +76,7 @@
       for (const p of pts) {
         if (mouse.active) {
           const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
-          if (d < MLINK && d > 30) { p.vx += dx / d * .012; p.vy += dy / d * .012; }
+          if (d < MLINK && d > 95) { p.vx += dx / d * .02; p.vy += dy / d * .02; } else if (d <= 95 && d > 0) { p.vx -= dx / d * .035; p.vy -= dy / d * .035; }
         }
         p.vx = Math.max(-.6, Math.min(.6, p.vx * .99 + (Math.random() - .5) * .015));
         p.vy = Math.max(-.6, Math.min(.6, p.vy * .99 + (Math.random() - .5) * .015));
@@ -89,13 +89,13 @@
         const a = pts[i];
         for (let k = i + 1; k < pts.length; k++) {
           const b = pts[k], d = Math.hypot(a.x - b.x, a.y - b.y);
-          if (d < LINK) { ctx.strokeStyle = `rgba(${c},${(1 - d / LINK) * .18})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+          if (d < LINK) { ctx.strokeStyle = `rgba(${c},${(1 - d / LINK) * .32})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
         }
         if (mouse.active) {
           const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-          if (md < MLINK) { ctx.strokeStyle = `rgba(${c},${(1 - md / MLINK) * .5})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+          if (md < MLINK) { ctx.strokeStyle = `rgba(${c},${(1 - md / MLINK) * .8})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
         }
-        ctx.fillStyle = `rgba(${c},.75)`; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = `rgba(${c},.95)`; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
       }
       if (mouse.active) { ctx.fillStyle = `rgba(${c},.9)`; ctx.beginPath(); ctx.arc(mouse.x, mouse.y, 2.4, 0, Math.PI * 2); ctx.fill(); }
     };
