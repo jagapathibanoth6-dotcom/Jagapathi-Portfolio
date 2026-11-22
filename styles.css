@@ -637,3 +637,14 @@ html{overflow-x:clip}
 @media(max-width:520px){.ft-top .ft-col:last-child{grid-column:auto}}
 .ft-copy{padding:6px 0 8px;font-size:12px;line-height:1.4}
 .layout{padding-bottom:0!important}
+/* ===== Footer v4: one slim row ===== */
+.foot{padding:18px 0 0;margin-top:16px}
+.ft-row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.ft-links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.ft-links a{color:#cfd8d4;font-size:13.5px}
+.ft-links a:hover,.ft-up:hover{color:#4ade9b;text-decoration:none}
+.ft-up{font-size:13.5px}
+.ft-giant{margin-top:10px}
+@media(max-width:600px){.ft-row{justify-content:center;text-align:center}.ft-links{justify-content:center;gap:6px 16px}}
+@media print{.ft-row{display:none!important}}
+#contact{padding-bottom:12px;margin-bottom:0}
