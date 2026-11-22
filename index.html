@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=10.0">
+<link rel="stylesheet" href="styles.css?v=11.0">
 
 <script type="application/ld+json">
 {
@@ -76,37 +76,66 @@
 </header>
 
 <section class="hero" id="top" aria-label="Introduction">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hx-bg" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+  <div class="hx-grid" id="hxGrid" aria-hidden="true"></div>
   <div class="hero-in">
     <div class="hero-copy">
       <p class="hero-badge"><span class="dot" aria-hidden="true"></span>Open to operations management roles · Manchester, UK</p>
-      <h1 class="hero-name">Jagapathi Nayak Banoth</h1>
-      <p class="hero-role">Operations &amp; People Leadership · MBA · Founder of Aspirants Way</p>
-      <p class="hero-pitch">I run safe, on-target operations and build the systems that make them better: <strong>zero safety incidents</strong> at Amazon, <strong>+20% sales</strong> as a GM intern, and a platform used by <strong>1,280 active aspirants</strong>.</p>
+      <h1 class="hero-name">Jagapathi <span class="grad">Nayak Banoth</span></h1>
+      <p class="hero-role">I'm <span class="rot" aria-label="an operations leader, a product founder and an AI-first builder"><span class="rw on">an operations leader</span><span class="rw">a product founder</span><span class="rw">an AI-first builder</span></span></p>
+      <p class="hero-pitch">MBA · Amazon fulfilment · Founder of Aspirants Way. I run safe, on-target operations and build the systems that make them better: <strong>zero safety incidents</strong>, <strong>+20% sales</strong> on placement, and a platform used by <strong>1,280 active aspirants</strong>.</p>
       <div class="hero-cta">
-        <a href="resume.html?v=20261121" class="btn btn-light">Operations CV</a>
-        <a href="resume-tech.html?v=20261121" class="btn btn-ghost-light">Product &amp; Tech CV</a>
-        <a href="mailto:jagapathibanoth6@gmail.com?subject=Opportunity%20for%20Jagapathi%20Nayak%20Banoth" class="btn btn-ghost-light">Email me</a>
-        <a href="https://www.linkedin.com/in/jagapathinayakbanoth" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+        <a href="resume.html?v=20261121" class="btn btn-glow">Operations CV <span aria-hidden="true">→</span></a>
+        <a href="resume-tech.html?v=20261121" class="btn btn-glass">Product &amp; Tech CV</a>
+        <a href="mailto:jagapathibanoth6@gmail.com?subject=Opportunity%20for%20Jagapathi%20Nayak%20Banoth" class="btn btn-glass">Email me</a>
+        <a href="https://www.linkedin.com/in/jagapathinayakbanoth" target="_blank" rel="noopener" class="btn btn-glass btn-icon" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
       </div>
-      <ul class="hero-cred" aria-label="Experience and education">
-        <li><b>Amazon</b> MAN1 Fulfilment</li>
-        <li><b>UCLan</b> MBA, 70%</li>
-        <li><b>Aspirants Way</b> Web · Android · iOS</li>
-      </ul>
+      <div class="hero-me">
+        <img src="profile.jpg" fetchpriority="high" alt="Photo of Jagapathi Nayak Banoth" width="56" height="56">
+        <ul class="hero-cred" aria-label="Experience and education">
+          <li><b>Amazon</b> MAN1 Fulfilment</li>
+          <li><b>UCLan</b> MBA, 70%</li>
+          <li><b>Aspirants Way</b> Web · Android · iOS</li>
+        </ul>
+      </div>
     </div>
-    <div class="hero-photo">
-      <div class="ring" aria-hidden="true"></div>
-      <img src="profile.jpg" fetchpriority="high" alt="Photo of Jagapathi Nayak Banoth" width="360" height="400">
-      <div class="float f1"><b>0</b><span>safety incidents</span></div>
-      <div class="float f2"><b>2 sites</b><span>DXM2 → MAN1</span></div>
+
+    <div class="console" id="console" aria-label="Illustrative overview of my work">
+      <div class="c-bar"><span class="c-dots"><i></i><i></i><i></i></span><span class="c-title">jagapathi · live overview</span><span class="c-live"><i></i>LIVE</span></div>
+      <div class="c-grid">
+        <div class="c-card c-safety">
+          <p class="c-label">Amazon MAN1 · Safety</p>
+          <p class="c-big">0 <small>incidents</small></p>
+          <p class="c-sub">DXM2 → MAN1 · peak &amp; non-peak</p>
+          <div class="shield" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="c-card c-users">
+          <p class="c-label">Aspirants Way · Active aspirants</p>
+          <p class="c-big"><span data-count="1280">1,280</span> <small class="up">▲ live</small></p>
+          <svg class="spark" viewBox="0 0 200 48" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4ade9b" stop-opacity=".45"/><stop offset="1" stop-color="#4ade9b" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0,44 L0,40 C20,38 30,36 45,33 S70,30 85,26 S110,24 125,18 S155,14 170,9 S190,6 200,4 L200,48 L0,48Z" fill="url(#sg)"/><path class="line" d="M0,40 C20,38 30,36 45,33 S70,30 85,26 S110,24 125,18 S155,14 170,9 S190,6 200,4" fill="none" stroke="#4ade9b" stroke-width="2.2"/></svg>
+          <p class="c-sub">71,972 questions · 37 exams · EN · हिन्दी · తెలుగు</p>
+        </div>
+        <div class="c-card c-starter">
+          <p class="c-label">Smart Starter · Sequenced start</p>
+          <div class="motors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="load"><span>Transformer load</span><div class="load-bar"><i></i></div></div>
+          <p class="c-sub">Motors start one by one · load kept under limit</p>
+        </div>
+        <div class="c-card c-ai">
+          <p class="c-label">AI current-affairs pipeline</p>
+          <ol class="pipe" aria-hidden="true"><li>Collect</li><li>Verify</li><li>Filter</li><li>Publish</li></ol>
+          <p class="c-sub">Fact-checked · neutral · legally compliant · 3 languages</p>
+        </div>
+      </div>
+      <p class="c-foot">Illustrative view of my work · figures as of Nov 2026</p>
     </div>
   </div>
+
   <div class="hero-stats">
     <div><b data-count="0">0</b><span>Safety incidents across two Amazon sites</span></div>
     <div><b data-count="20" data-prefix="+" data-suffix="%">+20%</b><span>Sales growth led on GM placement</span></div>
     <div><b data-count="15" data-prefix="−" data-suffix="%">−15%</b><span>Order processing time cut</span></div>
-    <div><b data-count="1280">1,280</b><span>Active users on the platform I founded</span></div>
+    <div><b data-count="71972">71,972</b><span>Practice questions on my platform</span></div>
   </div>
 </section>
 
@@ -462,6 +491,6 @@
   </main>
 </div>
 
-<script src="script.js?v=10.0" defer></script>
+<script src="script.js?v=11.0" defer></script>
 </body>
 </html>

@@ -13,6 +13,30 @@
     navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean).forEach(s => spy.observe(s));
   }
 
+
+  /* Hero: rotating role, grid spotlight, console tilt */
+  const rws = $$('.rw');
+  if (rws.length && !reduced) {
+    let ri = 0;
+    setInterval(() => {
+      const cur = rws[ri]; cur.classList.remove('on'); cur.classList.add('out');
+      setTimeout(() => cur.classList.remove('out'), 600);
+      ri = (ri + 1) % rws.length; rws[ri].classList.add('on');
+    }, 2600);
+  }
+  const heroEl = $('.hero'), grid = $('#hxGrid'), consoleEl = $('#console');
+  if (heroEl && !reduced && matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    heroEl.addEventListener('pointermove', e => {
+      const r = heroEl.getBoundingClientRect();
+      grid.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      grid.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      const c = consoleEl.getBoundingClientRect();
+      const px = (e.clientX - (c.left + c.width / 2)) / r.width, py = (e.clientY - (c.top + c.height / 2)) / r.height;
+      consoleEl.style.transform = `perspective(1200px) rotateY(${(px * 8).toFixed(2)}deg) rotateX(${(-py * 8).toFixed(2)}deg)`;
+    });
+    heroEl.addEventListener('pointerleave', () => { consoleEl.style.transform = ''; });
+  }
+
   /* Reading progress */
   const progress = $('#progress');
   const onScroll = () => {
