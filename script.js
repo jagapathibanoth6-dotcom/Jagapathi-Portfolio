@@ -37,6 +37,71 @@
     heroEl.addEventListener('pointerleave', () => { consoleEl.style.transform = ''; });
   }
 
+
+  /* Site-wide connected dots that link to the cursor */
+  const net = document.getElementById('net');
+  if (net && !reduced) {
+    const ctx = net.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let W = 0, H = 0, pts = [];
+    const mouse = { x: -9999, y: -9999, active: false };
+    let col = [74, 222, 155], target = [74, 222, 155];
+    const resize = () => {
+      W = innerWidth; H = innerHeight;
+      net.width = W * dpr; net.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = Math.round(Math.max(28, Math.min(95, (W * H) / 15000)));
+      pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3, r: Math.random() * 1.5 + .7 }));
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    window.addEventListener('pointermove', e => { mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true; }, { passive: true });
+    window.addEventListener('pointerdown', e => { mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true; }, { passive: true });
+    document.addEventListener('pointerleave', () => { mouse.active = false; });
+    // follow the accent colour of the section in view
+    const secs = $$('.sec');
+    const pickColour = () => {
+      const mid = innerHeight / 2; let found = null;
+      for (const s of secs) { const r = s.getBoundingClientRect(); if (r.top < mid && r.bottom > mid) { found = s; break; } }
+      const v = found ? getComputedStyle(found).getPropertyValue('--sa').trim() : '';
+      target = v ? v.split(',').map(Number) : [74, 222, 155];
+    };
+    window.addEventListener('scroll', pickColour, { passive: true }); pickColour();
+    const LINK = 125, MLINK = 190;
+    const frame = () => {
+      requestAnimationFrame(frame);
+      if (document.hidden) return;
+      col = col.map((c, i) => c + (target[i] - c) * .05);
+      const c = col.map(Math.round).join(',');
+      ctx.clearRect(0, 0, W, H);
+      for (const p of pts) {
+        if (mouse.active) {
+          const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
+          if (d < MLINK && d > 30) { p.vx += dx / d * .012; p.vy += dy / d * .012; }
+        }
+        p.vx = Math.max(-.6, Math.min(.6, p.vx * .99 + (Math.random() - .5) * .015));
+        p.vy = Math.max(-.6, Math.min(.6, p.vy * .99 + (Math.random() - .5) * .015));
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) { p.x = 0; p.vx *= -1; } if (p.x > W) { p.x = W; p.vx *= -1; }
+        if (p.y < 0) { p.y = 0; p.vy *= -1; } if (p.y > H) { p.y = H; p.vy *= -1; }
+      }
+      ctx.lineWidth = 1;
+      for (let i = 0; i < pts.length; i++) {
+        const a = pts[i];
+        for (let k = i + 1; k < pts.length; k++) {
+          const b = pts[k], d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < LINK) { ctx.strokeStyle = `rgba(${c},${(1 - d / LINK) * .18})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+        }
+        if (mouse.active) {
+          const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+          if (md < MLINK) { ctx.strokeStyle = `rgba(${c},${(1 - md / MLINK) * .5})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+        }
+        ctx.fillStyle = `rgba(${c},.75)`; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+      }
+      if (mouse.active) { ctx.fillStyle = `rgba(${c},.9)`; ctx.beginPath(); ctx.arc(mouse.x, mouse.y, 2.4, 0, Math.PI * 2); ctx.fill(); }
+    };
+    requestAnimationFrame(frame);
+  }
+
   /* Reading progress */
   const progress = $('#progress');
   const onScroll = () => {
