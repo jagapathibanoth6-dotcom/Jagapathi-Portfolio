@@ -614,3 +614,13 @@ html{overflow-x:clip}
   background:linear-gradient(180deg,rgba(74,222,155,.9) 0%,rgba(45,212,191,.55) 40%,rgba(96,165,250,.08) 75%,transparent 100%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
 @media print{.ft-giant{display:none}}
+/* ===== Footer v3: compact columns, giant name, centred copyright ===== */
+.foot{padding:40px 0 0}
+.ft-top{grid-template-columns:repeat(4,1fr);gap:28px}
+.ft-cta{align-items:flex-start}
+.ft-cta .btn{margin:2px 0 4px}
+.ft-giant{margin-top:36px;height:clamp(64px,12vw,210px);border-bottom:1px solid rgba(255,255,255,.06)}
+.ft-copy{text-align:center;color:var(--mute);font-size:13px;margin:0;padding:16px 0 22px}
+@media(max-width:720px){.ft-top{grid-template-columns:1fr 1fr;gap:28px 20px}}
+@media print{.ft-top,.ft-giant{display:none!important}}
+.ft-col a.btn{color:#04120c;font-weight:700}.ft-col a.btn:hover{color:#04120c}
