@@ -624,3 +624,14 @@ html{overflow-x:clip}
 @media(max-width:720px){.ft-top{grid-template-columns:1fr 1fr;gap:28px 20px}}
 @media print{.ft-top,.ft-giant{display:none!important}}
 .ft-col a.btn{color:#04120c;font-weight:700}.ft-col a.btn:hover{color:#04120c}
+/* ===== Footer v3.1: less cut-off name, shorter footer ===== */
+.foot{padding:26px 0 0;margin-top:24px}
+.ft-top{gap:18px}
+.ft-col{gap:6px}
+.ft-col h3{margin:0 0 4px;font-size:11.5px}
+.ft-col a{font-size:13.5px}
+.ft-cta .btn{margin:0 0 2px}
+.ft-giant{margin-top:18px;height:clamp(66px,16.5vw,290px)}
+.ft-copy{padding:10px 0 14px;font-size:12.5px}
+@media(max-width:720px){.ft-top{gap:18px 16px}}
+@media(max-width:520px){.ft-top .ft-col:last-child{grid-column:auto}}
