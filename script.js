@@ -39,7 +39,7 @@
     const t0 = performance.now();
     const tick = now => {
       const p = Math.min((now - t0) / 1100, 1);
-      el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+      el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString('en-GB') + suf;
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);

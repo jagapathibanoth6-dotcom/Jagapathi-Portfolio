@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=9.2">
+<link rel="stylesheet" href="styles.css?v=10.0">
 
 <script type="application/ld+json">
 {
@@ -75,17 +75,47 @@
   <a href="#cvs" class="btn btn-primary btn-sm">Download CV</a>
 </header>
 
-<div class="layout" id="top">
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="hero-copy">
+      <p class="hero-badge"><span class="dot" aria-hidden="true"></span>Open to operations management roles · Manchester, UK</p>
+      <h1 class="hero-name">Jagapathi Nayak Banoth</h1>
+      <p class="hero-role">Operations &amp; People Leadership · MBA · Founder of Aspirants Way</p>
+      <p class="hero-pitch">I run safe, on-target operations and build the systems that make them better: <strong>zero safety incidents</strong> at Amazon, <strong>+20% sales</strong> as a GM intern, and a platform used by <strong>1,280 active aspirants</strong>.</p>
+      <div class="hero-cta">
+        <a href="resume.html?v=20261121" class="btn btn-light">Operations CV</a>
+        <a href="resume-tech.html?v=20261121" class="btn btn-ghost-light">Product &amp; Tech CV</a>
+        <a href="mailto:jagapathibanoth6@gmail.com?subject=Opportunity%20for%20Jagapathi%20Nayak%20Banoth" class="btn btn-ghost-light">Email me</a>
+        <a href="https://www.linkedin.com/in/jagapathinayakbanoth" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+      </div>
+      <ul class="hero-cred" aria-label="Experience and education">
+        <li><b>Amazon</b> MAN1 Fulfilment</li>
+        <li><b>UCLan</b> MBA, 70%</li>
+        <li><b>Aspirants Way</b> Web · Android · iOS</li>
+      </ul>
+    </div>
+    <div class="hero-photo">
+      <div class="ring" aria-hidden="true"></div>
+      <img src="profile.jpg" fetchpriority="high" alt="Photo of Jagapathi Nayak Banoth" width="360" height="400">
+      <div class="float f1"><b>0</b><span>safety incidents</span></div>
+      <div class="float f2"><b>2 sites</b><span>DXM2 → MAN1</span></div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><b data-count="0">0</b><span>Safety incidents across two Amazon sites</span></div>
+    <div><b data-count="20" data-prefix="+" data-suffix="%">+20%</b><span>Sales growth led on GM placement</span></div>
+    <div><b data-count="15" data-prefix="−" data-suffix="%">−15%</b><span>Order processing time cut</span></div>
+    <div><b data-count="1280">1,280</b><span>Active users on the platform I founded</span></div>
+  </div>
+</section>
+
+<div class="layout">
 
   <!-- ============ SIDEBAR / PROFILE ============ -->
   <aside class="side" aria-label="Profile">
     <div class="profile">
-      <div class="avatar"><img src="profile.jpg" fetchpriority="high" alt="Photo of Jagapathi Nayak Banoth" width="160" height="160"></div>
-      <h1 class="name">Jagapathi Nayak Banoth</h1>
-      <p class="role">Operations Professional · MBA</p>
-      <p class="role-sub">Amazon Fulfilment (MAN1) · Former GM Intern</p>
-      <p class="open"><span class="dot" aria-hidden="true"></span>Open to operations &amp; people leadership roles</p>
-
+      <h2 class="side-title">Quick facts</h2>
       <div class="side-actions">
         <a href="resume.html?v=20261121" class="btn btn-primary">Operations CV</a>
         <a href="resume-tech.html?v=20261121" class="btn btn-primary btn-alt">Product &amp; Tech CV</a>
@@ -432,6 +462,6 @@
   </main>
 </div>
 
-<script src="script.js?v=9.4" defer></script>
+<script src="script.js?v=10.0" defer></script>
 </body>
 </html>
