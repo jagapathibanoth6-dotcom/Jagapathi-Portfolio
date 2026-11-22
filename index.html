@@ -306,13 +306,19 @@
         <article class="proj proj-3d proj-upcoming reveal">
           <div class="proj-head"><div class="ico3d ico-up" aria-hidden="true">IoT</div><div><h3>Smart Starter &amp; Transformer Gateway — Connected Motor Control</h3><p class="status build">Upcoming · Starter PCBs designed, prototypes next</p></div></div>
           <p>A two-part system for farms that share a distribution transformer. Smart starters at each motor talk by LoRa radio to one gateway at the transformer, which monitors the supply, connects to the internet and lets farmers control their motors from a mobile app.</p>
+          <div class="why">
+            <b>The problem it solves</b>
+            <p>In Telangana, the electricity regulator has directed the removal of farmers' automatic pump starters because motors starting and running together overload and damage transformers, and in 2026 the government again urged farmers to avoid them. Farmers still need automatic control because supply hours are unpredictable. Smart Starter keeps that convenience while removing the cause of the damage.</p>
+          </div>
           <div class="sys">
             <div><b>Part 1 · Smart Starter (each motor)</b><p>Switches, protects and measures a three-phase motor: voltage, current, power, power factor, phase loss and phase sequence. ESP32-S3 controller, display and controls, 5 kV isolation and a fail-safe contactor drive. Controller and measurement PCBs are routed and checked; next are manufacturing files and three prototypes.</p></div>
             <div><b>Part 2 · Transformer Gateway (one per transformer)</b><p>Measures transformer voltage and phase currents, analyses the load, and connects to the internet through a single SIM. Sends commands to and receives status from every starter within about 5 km, and pushes live updates to the app.</p></div>
           </div>
           <ul>
             <li><b>Cost-efficient:</b> one SIM and internet connection serves 5–30 motors, instead of one per starter</li>
-            <li><b>Protects the transformer:</b> starts motors in sequence, one by one, to avoid the load surge that damages transformers (a government concern)</li>
+            <li><b>Protects the transformer:</b> starts motors in sequence, one by one, never all at once, so the start-up surge that burns transformers is avoided</li>
+            <li><b>Automatic switch-off:</b> turns motors off on overload, phase faults, low voltage or when the transformer nears its limit, so motors no longer run unattended all night</li>
+            <li><b>Data for the power company:</b> each gateway can report its transformer's live status and load, giving the distribution company (DISCOM) real-time visibility to plan supply and prevent failures</li>
             <li><b>Two ways to control:</b> a mobile app over the internet, and a remote control that works directly by radio within a 5 km range; both start, stop and monitor motors, with fault and supply-loss alerts</li>
           </ul>
           <p class="kw"><span>Skills:</span> Product &amp; system design · IoT architecture (LoRa + cellular) · PCB design · Electrical safety · Load management · Embedded systems (ESP32) · Test planning</p>

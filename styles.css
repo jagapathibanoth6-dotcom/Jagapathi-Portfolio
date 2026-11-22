@@ -247,3 +247,6 @@ strong,b{font-weight:600;color:var(--ink)}
 .partner p{font-size:14px;margin:0;color:var(--ink2)}
 .skills>.skill:last-child{grid-column:1/-1}
 .skills>.skill:last-child ul{display:flex;flex-wrap:wrap;gap:6px 22px}
+.why{background:#fff;border:1px solid #f0d9b5;border-left:4px solid var(--warn);border-radius:10px;padding:12px 14px}
+.why b{display:block;font-size:14.5px;color:var(--warn);margin-bottom:2px}
+.why p{font-size:14px;margin:0;color:var(--ink2)}
