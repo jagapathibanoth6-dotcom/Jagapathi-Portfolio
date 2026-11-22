@@ -1,0 +1,70 @@
+# Jagapathi Nayak Banoth
+
+> MBA-qualified operations professional in Manchester, UK. Amazon fulfilment (MAN1) and a manager-scoped General Manager Intern placement. Open to operations and people leadership roles in the UK.
+
+Last updated: November 2026
+Website: https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio/
+Operations CV: https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio/resume.html
+Product & Tech CV: https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio/resume-tech.html
+Email: jagapathibanoth6@gmail.com
+Phone: +44 7867 035864
+LinkedIn: https://www.linkedin.com/in/jagapathinayakbanoth
+GitHub: https://github.com/jagapathinayak12
+Location: Manchester, United Kingdom
+Languages: English (fluent), Telugu (native), Hindi (fluent)
+
+## Target roles
+Operations Supervisor / Team Leader; Shift or Area Manager (fulfilment / logistics); Operations Coordinator; Operations or Process Improvement Analyst.
+
+## Experience
+
+### Warehouse Associate — Amazon, MAN1 Fulfilment Centre, Manchester, UK (Sep 2024 – Present)
+Started at DXM2; voluntary cross-site transfer to MAN1 in July 2025.
+- Inbound and outbound flow against productivity and quality targets across AU, BU and UTK inventory flow
+- Cross-trained in stow, pick, pack and sort
+- Zero safety incidents across DXM2 and MAN1
+- Consistently exceeded productivity expectations, including peak
+- Used performance data to adjust pacing and workflow; coordinated with multinational teams
+
+### General Manager Intern — Double Zero Pizzeria, Manchester, UK (Jan 2024 – Sep 2024)
+MBA professional placement with manager-level scope (staff, inventory, finance, service standards, compliance) under placement supervision.
+- Sales volume +20% through market research and a new vegan menu
+- Order processing time −15% through POS optimisation; improved table turnover
+- Cost efficiency improved 15% through process changes
+- Negotiated and managed £20k+ in supplier agreements
+- Maintained a 4.5-star customer rating
+- Customer-feedback analysis with data visualisation used by leadership
+- Led teams through peak periods and staff shortages; flagged and resolved budget discrepancies
+- Placement consulting: Lean, Just-in-Time, value stream mapping and 5S recommendations; inventory and cost control
+
+### Founder & Product Builder (independent, ongoing)
+- Aspirants Way — Founder & Full-Stack Developer (https://www.aspirantsway.com/): free Indian government-exam prep platform. Live on the web, Android (Google Play: https://play.google.com/store/apps/details?id=com.aspirantsway.app) and iOS (App Store: https://apps.apple.com/gb/app/aspirants-way/id6812630753). 1,280 active aspirants, 71,972 practice questions and 37 exams mapped (live figures, November 2026). Offline study supported. English, Hindi and Telugu. Exams: SSC, Banking, Railways, Police & defence, UPSC & State PSC, Teaching (TET, CTET, DSC). Features: daily plan, study materials, exam-style tests with solutions, live quizzes with leaderboards, daily current affairs, weekly timetable, recruitment updates, discussion rooms, analytics, offline sync
+- Aspirants Way Tutors Platform (live, https://www.tutor.aspirantsway.com): used by Aspirants Way tutors for schedule management, online classes, quizzes, test conduct and communication management for student groups
+- Aspirants Way Institute Platform (institute.aspirantsway.com): production-ready, separate multi-tenant platform for coaching-institute management (students, batches, assigned tests, reporting). Open to partners or investors to fund promotion and run day-to-day operations, with full technical support from Jagapathi as a priority
+- Elevated Goat & Poultry Shed (live 3D/VR model: https://jagapathibanoth6-dotcom.github.io/gaot-shed/): 75 x 50 ft elevated steel shed for ~200 goats with poultry underneath; 37 design versions; full bill of quantities ≈ ₹52.65 lakh; Three.js + WebXR, runs on phone, PC and Meta Quest 3S
+- Future House (live 3D/VR model: https://jagapathibanoth6-dotcom.github.io/Future-house/ ; floor plans and budget: https://jagapathibanoth6-dotcom.github.io/Future-house/plan.html): 36 x 40 ft G+1 home, ~2,556 sq ft, 4 bedrooms, home theatre; electrical and plumbing layouts; budget ≈ ₹61 lakh
+- Smart Starter & Transformer Gateway (upcoming): two-part connected motor-control system for farms sharing a transformer. Part 1: smart three-phase starter at each motor (ESP32-S3, dual power metering, 5 kV isolation, fail-safe contactor; PCBs routed and checked, prototypes next). Part 2: gateway at the transformer measuring voltage and phase currents, with one SIM internet connection, controlling 5–30 starters by LoRa within ~5 km. Sequenced one-by-one motor starting to protect the transformer from load surges; control by mobile app and by a remote control with a 5 km range
+
+## Education
+- MBA with Professional Placement — University of Central Lancashire, Preston, UK (Sep 2022 – Sep 2024), 70%
+- Bachelor of Commerce (General) — City College Hyderabad, Osmania University (Jun 2018 – May 2022), 70%
+- Intermediate (BiPC) — Telangana State Model School, Parvathagiri (2016 – 2018), 85%
+- SSC — Telangana State Model School, Parvathagiri (2016), GPA 7.5
+
+## Training & certifications
+Amazon Warehouse Operations Training; Cross-departmental Operations Training (Amazon); UK Food Safety & Hygiene Compliance; UCLan Professional Placement Assessment; Computerised Accounting (Tally)
+
+## Core skills
+Operations: warehouse and fulfilment operations; inbound/outbound logistics; inventory management; health and safety; KPI and productivity management; Lean, 5S, JIT, value stream mapping; process improvement; team leadership, training and rostering; supplier negotiation; cost control and financial oversight; cost estimation and bill of quantities; market research; Microsoft Excel and Microsoft 365; Tally.
+
+## Technical skills
+- Languages: JavaScript, TypeScript, Swift, Dart, HTML5, CSS3, Python (NumPy, SciPy)
+- Frontend and web: React, Next.js, Tailwind CSS, progressive web apps, charts and dashboards, PDF export
+- Mobile: Swift (native iOS), Flutter and Dart (Android and iOS), React Native, Expo, Xcode, Android (Google Play) and iOS (App Store) publishing
+- Backend and APIs: Node.js, Express, REST APIs, Socket.io real-time, OTP authentication
+- Databases and cloud: MongoDB, Firebase (Authentication, Firestore, Storage, Cloud Functions, push notifications), GitHub Pages
+- Architecture: multi-tenant SaaS, role-based access control, offline-first sync, multilingual content, live quizzes and leaderboards, KPI and analytics design
+- 3D and VR: Three.js, WebXR, Meta Quest 3S walkthroughs
+- Embedded and hardware: ESP32-S3, LoRa (SX1262), SPI, I2C, ATM90E32AS power metering, PCB schematic and layout design, isolation and electrical safety, test planning
+- AI: AI-first builder; AI-assisted software, hardware and 3D development; prompt engineering; offline / on-device AI models; AI assistants for research, coding, testing and documentation. All portfolio projects were built with AI
+- Tools: Git and GitHub, SEO and structured data, llms.txt, technical documentation

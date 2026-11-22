@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio/sitemap.xml
