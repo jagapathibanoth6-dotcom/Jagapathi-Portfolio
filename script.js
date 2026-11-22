@@ -49,8 +49,8 @@
     const resize = () => {
       W = innerWidth; H = innerHeight;
       net.width = W * dpr; net.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.round(Math.max(70, Math.min(200, (W * H) / 7000)));
-      pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3, r: Math.random() * 1.8 + .9 }));
+      const n = Math.round(Math.max(40, Math.min(110, (W * H) / 12000)));
+      pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.1 + .6 }));
     };
     resize();
     window.addEventListener('resize', resize);
@@ -65,8 +65,13 @@
       const v = found ? getComputedStyle(found).getPropertyValue('--sa').trim() : '';
       target = v ? v.split(',').map(Number) : [74, 222, 155];
     };
-    window.addEventListener('scroll', pickColour, { passive: true }); pickColour();
-    const LINK = 140, MLINK = 230;
+    let lastY = scrollY;
+    window.addEventListener('scroll', () => {
+      const dy = scrollY - lastY; lastY = scrollY;
+      for (const p of pts) { p.y -= dy; if (p.y < 0) { p.y += H; p.x = Math.random() * W; } else if (p.y > H) { p.y -= H; p.x = Math.random() * W; } }
+      pickColour();
+    }, { passive: true }); pickColour();
+    const LINK = 130, MLINK = 280;
     const frame = () => {
       requestAnimationFrame(frame);
       if (document.hidden) return;
@@ -76,28 +81,28 @@
       for (const p of pts) {
         if (mouse.active) {
           const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
-          if (d < MLINK && d > 95) { p.vx += dx / d * .02; p.vy += dy / d * .02; } else if (d <= 95 && d > 0) { p.vx -= dx / d * .035; p.vy -= dy / d * .035; }
+          
         }
-        p.vx = Math.max(-.6, Math.min(.6, p.vx * .99 + (Math.random() - .5) * .015));
-        p.vy = Math.max(-.6, Math.min(.6, p.vy * .99 + (Math.random() - .5) * .015));
+        p.vx = Math.max(-.35, Math.min(.35, p.vx + (Math.random() - .5) * .01));
+        p.vy = Math.max(-.35, Math.min(.35, p.vy + (Math.random() - .5) * .01));
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) { p.x = 0; p.vx *= -1; } if (p.x > W) { p.x = W; p.vx *= -1; }
-        if (p.y < 0) { p.y = 0; p.vy *= -1; } if (p.y > H) { p.y = H; p.vy *= -1; }
+        if (p.y < 0) p.y += H; if (p.y > H) p.y -= H;
       }
       ctx.lineWidth = 1;
       for (let i = 0; i < pts.length; i++) {
         const a = pts[i];
         for (let k = i + 1; k < pts.length; k++) {
           const b = pts[k], d = Math.hypot(a.x - b.x, a.y - b.y);
-          if (d < LINK) { ctx.strokeStyle = `rgba(${c},${(1 - d / LINK) * .32})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+          if (d < LINK) { ctx.strokeStyle = `rgba(${c},${(1 - d / LINK) * .22})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
         }
         if (mouse.active) {
           const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-          if (md < MLINK) { ctx.strokeStyle = `rgba(${c},${(1 - md / MLINK) * .8})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
+          if (md < MLINK) { ctx.strokeStyle = `rgba(${c},${(1 - md / MLINK) * .6})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
         }
-        ctx.fillStyle = `rgba(${c},.95)`; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = `rgba(${c},.8)`; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
       }
-      if (mouse.active) { ctx.fillStyle = `rgba(${c},.9)`; ctx.beginPath(); ctx.arc(mouse.x, mouse.y, 2.4, 0, Math.PI * 2); ctx.fill(); }
+      if (mouse.active) { ctx.fillStyle = `rgba(${c},.9)`; ctx.beginPath(); ctx.arc(mouse.x, mouse.y, 2, 0, Math.PI * 2); ctx.fill(); }
     };
     requestAnimationFrame(frame);
   }
