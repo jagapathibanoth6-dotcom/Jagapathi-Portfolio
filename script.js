@@ -57,6 +57,48 @@
     window.addEventListener('beforeprint', () => $$('.reveal').forEach(el => el.classList.add('in')));
   }
 
+
+  /* Per-section animations: each card type gets its own entrance */
+  if (!reduced && 'IntersectionObserver' in window) {
+    const plan = [
+      ['.kpi', 'pop'], ['.job', 'slide-left'], ['.proj', 'flip'], ['.skill', 'zoom'],
+      ['.techskills', 'slide-right'], ['.lp', 'rise'], ['.edu', 'blur'], ['.target', 'rise'],
+      ['.sub-title', 'curtain'], ['.form', 'rise'], ['.c-list', 'slide-left'], ['.profile', 'blur']
+    ];
+    const animEls = [];
+    plan.forEach(([sel, kind]) => $$(sel).forEach((el, i) => {
+      el.classList.remove('reveal');
+      el.dataset.anim = kind;
+      const sibs = [...el.parentElement.children].filter(c => c.matches(sel));
+      el.style.setProperty('--d', (sibs.indexOf(el) % 4) * 110 + 'ms');
+      animEls.push(el);
+    }));
+    $$('.certs li').forEach((el, i) => { el.classList.remove('reveal'); el.dataset.anim = i % 2 ? 'alt-r' : 'alt-l'; el.style.setProperty('--d', (i % 4) * 90 + 'ms'); animEls.push(el); });
+    // stagger children
+    $$('[data-anim]').forEach(el => {
+      $$('ul > li, .techskills dl > div, .tags span', el).forEach((c, i) => { c.classList.add('stg'); c.style.setProperty('--i', Math.min(i, 12)); });
+    });
+    $$('.sec-title').forEach(t => animEls.push(t));
+    const animObs = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { const t = e.target; t.classList.add('in'); animObs.unobserve(t); setTimeout(() => t.classList.add('done'), 1600); }
+    }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+    animEls.forEach(el => animObs.observe(el));
+    setTimeout(() => animEls.forEach(el => { el.classList.add('in'); setTimeout(() => el.classList.add('done'), 1600); }), 6000);
+    window.addEventListener('beforeprint', () => animEls.forEach(el => el.classList.add('in')));
+  }
+
+  /* Mouse-follow glare on cards */
+  if (!reduced && matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    $$('.kpi,.job,.proj,.skill,.edu,.techskills,.lp,.form,.profile,.certs li').forEach(card => {
+      card.classList.add('glare');
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--gx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--gy', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
   /* Count-up on achievements */
   const runCount = el => {
     const end = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
