@@ -532,3 +532,46 @@ strong,b{color:var(--ink)}
 @media (max-width:560px){.factbar ul{grid-template-columns:1fr 1fr;justify-content:stretch}.factbar li:nth-child(2),.factbar li:nth-child(4){grid-column:1/-1}}
 .sec p{max-width:78ch}
 @media (max-width:560px){.factbar li:nth-child(5),.factbar li:nth-child(6){grid-column:1/-1}.factbar ul{gap:10px 16px}}
+
+/* ================= PER-SECTION ACCENT COLOURS ================= */
+#summary{--sa:74,222,155}
+#achievements{--sa:45,212,191}
+#experience{--sa:96,165,250}
+#projects{--sa:167,139,250}
+#skills{--sa:251,191,36}
+#education{--sa:244,114,182}
+#training{--sa:56,189,248}
+#contact{--sa:74,222,155}
+.sec{position:relative;isolation:isolate}
+.sec::before{content:"";position:absolute;z-index:-1;inset:-40px -12vw;pointer-events:none;
+  background:radial-gradient(600px 320px at 12% 0%,rgba(var(--sa),.09),transparent 70%)}
+.sec .num{background:rgba(var(--sa),.12);color:rgb(var(--sa));box-shadow:0 0 14px -4px rgba(var(--sa),.7)}
+.sec .sec-title::after{background:linear-gradient(90deg,rgba(var(--sa),.5),transparent)}
+.sec .kpi b{color:rgb(var(--sa));text-shadow:0 0 24px rgba(var(--sa),.3)}
+.js .sec .kpi.in b{animation-name:kpiGlowS}
+@keyframes kpiGlowS{40%{text-shadow:0 0 28px rgba(var(--sa),.95)}}
+.sec .kpi:hover,.sec .proj:hover,.sec .job:hover,.sec .skill:hover,.sec .edu:hover{border-color:rgba(var(--sa),.45);box-shadow:0 0 0 1px rgba(var(--sa),.15),0 20px 40px -24px rgba(var(--sa),.5)}
+.sec .glare::after{background:radial-gradient(320px circle at var(--gx,50%) var(--gy,50%),rgba(var(--sa),.15),transparent 55%)}
+.sec .job::before{background:linear-gradient(rgb(var(--sa)),rgba(var(--sa),.4))}
+.sec .when{background:rgba(var(--sa),.12);color:rgb(var(--sa))!important}
+.sec .job li::marker,.sec .proj li::marker{color:rgb(var(--sa))}
+.sec .ach li::before{background-color:rgba(var(--sa),.14)}
+.sec .skill li::before{background:rgb(var(--sa))}
+.sec .skill h3{border-bottom-color:rgba(var(--sa),.2)}
+.sec .techskills dt,.sec .lp dt{color:rgb(var(--sa))}
+.sec .techskills dl>div:hover{background:rgba(var(--sa),.06)}
+.sec .techskills dl>div:hover dt{text-shadow:0 0 14px rgba(var(--sa),.8)}
+.sec .certs li{border-left-color:rgb(var(--sa))}
+.sec .certs li:hover{box-shadow:-6px 0 20px -8px rgba(var(--sa),.7)}
+.sec .edu-grade,.sec .edu h3 b{color:rgb(var(--sa))}
+.sec .pills li:hover{border-color:rgba(var(--sa),.5);color:rgb(var(--sa))}
+#projects .sub-title::after{background:linear-gradient(90deg,rgba(var(--sa),.4),transparent)}
+#projects .proj-3d{background:linear-gradient(135deg,rgba(var(--sa),.07),rgba(255,255,255,.02) 50%)}
+#projects .status.live{color:#4ade9b!important}
+#education .edu{border-top:2px solid rgba(var(--sa),.35)}
+#achievements .kpi{background:linear-gradient(160deg,rgba(var(--sa),.06),rgba(255,255,255,.02) 60%)}
+#skills .skill{background:linear-gradient(160deg,rgba(var(--sa),.05),rgba(255,255,255,.02) 55%)}
+#contact .form input:focus,#contact .form textarea:focus{border-color:rgb(var(--sa));box-shadow:0 0 0 3px rgba(var(--sa),.2)}
+@media print{.sec::before{display:none}.sec .kpi b,.sec .when,.sec .techskills dt,.sec .lp dt,.sec .edu-grade{color:#0b6b55!important;text-shadow:none}.sec .num{color:#0b6b55;background:#e8f3ef;box-shadow:none}}
+.sec::before{background:radial-gradient(560px 170px at 22% 190px,rgba(var(--sa),.10),transparent 100%)}
+.sec::before{background:radial-gradient(520px 170px at 45% 190px,rgba(var(--sa),.10),transparent 100%)}
