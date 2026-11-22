@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jagapathi Nayak Banoth — Product &amp; Tech CV</title>
-<meta name="description" content="Resume of Jagapathi Nayak Banoth — MBA, operations and people leadership, Amazon fulfilment, Manchester.">
+<title>Jagapathi Nayak Banoth — Product & Tech CV</title>
+<meta name="description" content="CV of Jagapathi Nayak Banoth — founder and full-stack developer of Aspirants Way; React, Flutter, Node.js, Google Cloud, AI; MBA; Manchester, UK.">
 <meta name="author" content="Jagapathi Nayak Banoth">
 <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -12,74 +12,64 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#111418;--soft:#4a525c;--dim:#7a838e;--line:#e3e6ea;--acc:#0b6b55;--teal:#0b6b55;--bg:#eceef1}
+:root{--ink:#111418;--soft:#3d454f;--dim:#6b747f;--line:#e2e5e9;--acc:#0b6b55;--bg:#eceef1}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font:9pt/1.38 'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:9.9pt/1.46 'Inter',Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px max(4vw,16px);background:#0b0d10;color:#eef1f5}
 .bar a,.bar button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;font:600 14px 'Inter',sans-serif;border:1px solid rgba(255,255,255,.16);background:transparent;color:inherit;cursor:pointer}
 .bar button{background:var(--acc);color:#fff;border-color:var(--acc)}
-.page{width:210mm;max-width:100%;margin:28px auto;background:#fff;box-shadow:0 30px 60px -30px rgba(0,0,0,.35);border-radius:6px;overflow:hidden}
-header{background:#0f2a24;color:#eef1f5;padding:11mm 14mm 9mm;position:relative;overflow:hidden}
-header::after{content:"";position:absolute;right:-60px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(46,170,135,.35),transparent 70%)}
-h1{font:700 26pt/1.05 'Space Grotesk',sans-serif;letter-spacing:-.02em}
-.role{margin-top:6px;font-weight:500;color:#9fe0c9;font-size:11.5pt}
-.contact{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:9.5pt;color:#c9d0d8}
-.contact a:hover{color:#9fe0c9}
-.body{display:grid;grid-template-columns:1fr 62mm;gap:9mm;padding:9mm 14mm 12mm}
-h2{font:700 11pt 'Space Grotesk',sans-serif;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;margin:0 0 9px;padding-bottom:5px;border-bottom:1px solid var(--line)}
-h2::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--acc)}
-section{margin-bottom:4.5mm;break-inside:avoid-page}
-.summary{color:var(--soft)}
-.job{margin-bottom:12px;break-inside:avoid}
-.job-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
-h3{font-size:10.8pt;font-weight:600}
-.date{font-size:9pt;color:var(--dim);white-space:nowrap}
-.org{color:var(--teal);font-weight:500;font-size:9.6pt;margin:1px 0 5px}
-.job p{color:var(--soft);margin-bottom:5px}
-ul{padding-left:15px;color:var(--soft)}
-li{margin-bottom:2px}
-li::marker{color:var(--teal)}
-li b{color:var(--ink)}
-.proj{margin-bottom:9px;break-inside:avoid}
-.proj h3{font-size:10pt}
-.proj p{color:var(--soft)}
-.stack{font-size:8.8pt;color:var(--dim)}
-.side section{margin-bottom:6mm}
-.kpis{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.kpi{border:1px solid var(--line);border-radius:8px;padding:7px 8px}
-.kpi b{display:block;font:700 14pt/1.1 'Space Grotesk',sans-serif}
-.kpi span{font-size:8pt;color:var(--dim);line-height:1.3;display:block}
-.kpi.hi{background:var(--acc);border-color:var(--acc);color:#fff}
-.kpi.hi span{color:#d6efe7}
-.tags{display:flex;flex-wrap:wrap;gap:4px}
-.tags span{font-size:8.6pt;padding:2px 8px;border-radius:999px;background:#f2f4f6;border:1px solid var(--line);color:var(--soft)}
-.edu{margin-bottom:8px}
-.edu h3{font-size:9.8pt}
-.edu p{font-size:9pt;color:var(--soft)}
-.plain{list-style:none;padding:0}
-.plain li{font-size:9.2pt;padding:3px 0;border-bottom:1px dashed var(--line)}
-.plain li:last-child{border:0}
-footer{padding:0 14mm 9mm;font-size:8.5pt;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
-@media (max-width:760px){
-  .page{margin:0;border-radius:0}
-  header{padding:28px 20px}
-  .body{grid-template-columns:1fr;padding:24px 20px}
-  footer{padding:0 20px 24px}
-}
-@page{size:A4;margin:0}
-@media print{
-  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .bar{display:none}
-  .page{margin:0;box-shadow:none;border-radius:0;width:auto}
-}
 .switch{display:inline-flex;gap:4px;background:rgba(255,255,255,.08);padding:4px;border-radius:999px}
 .switch a{border:0!important;min-height:34px!important;padding:0 14px!important;font-size:13px!important}
 .switch a.on{background:#fff;color:#0f2a24}
+.page{width:210mm;max-width:100%;margin:28px auto;background:#fff;box-shadow:0 30px 60px -30px rgba(0,0,0,.35);border-radius:6px;overflow:hidden}
+header{background:#0f2a24;color:#eef1f5;padding:10mm 15mm 8mm}
+h1{font:700 24pt/1.05 'Space Grotesk',Arial,sans-serif;letter-spacing:-.02em}
+.role{margin-top:5px;font-weight:600;color:#9fe0c9;font-size:11.2pt}
+.contact{margin-top:9px;font-size:9.2pt;color:#d3dae1}
+.contact a,.contact span{white-space:nowrap}
+.contact .pf{display:block;margin-top:3px}
+.contact i{font-style:normal;color:#6f8a82;margin:0 7px}
+.body{padding:7mm 15mm 6mm}
+h2{font:700 10.6pt 'Space Grotesk',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin:0 0 6px;padding-bottom:4px;border-bottom:1.2px solid var(--line)}
+section{margin-bottom:5.4mm}
+.summary{color:var(--soft)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+.kpi{border:1px solid var(--line);border-radius:7px;padding:5px 9px}
+.kpi b{font:700 13pt/1.15 'Space Grotesk',Arial,sans-serif;color:var(--ink);margin-right:4px}
+.kpi span{font-size:8.4pt;color:var(--dim)}
+.job{margin-bottom:11px;break-inside:avoid}
+.job-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+h3{font-size:10.8pt;font-weight:600}
+.date{font-size:9pt;color:var(--dim);white-space:nowrap;font-weight:500}
+.org{color:var(--acc);font-weight:500;font-size:9.3pt;margin:1px 0 3px}
+.job>p{color:var(--soft);margin-bottom:3px}
+ul{padding-left:14px;color:var(--soft)}
+li{margin-bottom:2.5px}
+li::marker{color:var(--acc)}
+li b,.summary b{color:var(--ink);font-weight:600}
+.stack{font-size:8.7pt;color:var(--dim);margin-top:2px}
+.skills p{color:var(--soft);margin-bottom:2.5px}
+.skills b{color:var(--ink);font-weight:600}
+.edu{display:flex;justify-content:space-between;gap:10px;margin-bottom:3px}
+.edu p{color:var(--soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 9mm}
+footer{padding:0 15mm 7mm;font-size:8.3pt;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+@media (max-width:760px){
+  .page{margin:0;border-radius:0}
+  header{padding:26px 20px}.body{padding:22px 20px}footer{padding:0 20px 22px}
+  .kpis{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}
+  .contact a,.contact span{white-space:normal}
+}
 @media (max-width:600px){.bar{flex-wrap:wrap}.switch{order:3;width:100%;justify-content:center}}
-@media print{.switch{display:none}}
-.tk{font-size:8.6pt;color:var(--soft);margin-bottom:4px;line-height:1.35}
-.tk b{display:block;color:var(--ink);font-size:8.6pt}
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bar,.switch{display:none}
+  .page{margin:0;box-shadow:none;border-radius:0;width:auto}
+  .job,.edu,section>h2{break-inside:avoid}
+  h2{break-after:avoid}
+}
 </style>
 </head>
 <body>
@@ -93,119 +83,38 @@ footer{padding:0 14mm 9mm;font-size:8.5pt;color:var(--dim);display:flex;justify-
   <header>
     <h1>Jagapathi Nayak Banoth</h1>
     <p class="role">Founder &amp; Full-Stack Developer · Product &amp; Operations · MBA</p>
-    <div class="contact">
-      <a href="mailto:jagapathibanoth6@gmail.com">jagapathibanoth6@gmail.com</a>
-      <a href="tel:+447867035864">+44 7867 035864</a>
-      <span>Manchester, UK</span>
-      <a href="https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio">jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio</a>
-      <a href="https://www.linkedin.com/in/jagapathinayakbanoth">linkedin.com/in/jagapathinayakbanoth</a>
-    </div>
+    <p class="contact"><a href="mailto:jagapathibanoth6@gmail.com">jagapathibanoth6@gmail.com</a><i>|</i><a href="tel:+447867035864">+44 7867 035864</a><i>|</i><span>Manchester, UK</span><i>|</i><a href="https://www.linkedin.com/in/jagapathinayakbanoth">linkedin.com/in/jagapathinayakbanoth</a><a class="pf" href="https://jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio/">Portfolio: jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio</a></p>
   </header>
-
   <div class="body">
-    <div class="main">
-      <section>
-        <h2>Profile</h2>
-        <p class="summary">Founder and full-stack developer of Aspirants Way, an exam-prep platform live on web, Android and iOS with 1,280 active aspirants and 71,972 practice questions. MBA graduate with hands-on Amazon fulfilment and General Manager placement experience, so I build products with an operator's eye for KPIs, workflows and reliability. AI-first builder: every project here was designed and built with AI assistants, prompt engineering and on-device models.</p>
-      </section>
-
-      <section>
-        <h2>Product &amp; engineering</h2>
-        <div class="job">
-          <div class="job-head"><h3>Founder &amp; Full-Stack Developer — Aspirants Way</h3><span class="date">Sep 2026 – Present</span></div>
-          <p class="org">aspirantsway.com · App Store · Google Play · tutor.aspirantsway.com</p>
-          <ul>
-            <li>Built and launched a free government-exam prep platform on <b>web, Android and iOS</b>: <b>1,280 active aspirants</b>, <b>71,972 practice questions</b>, <b>37 exams</b> mapped</li>
-            <li><b>AI-automated daily current affairs</b>: filters out incorrect, unverified, opinionated and legally non-compliant content; published in English, Hindi and Telugu</li>
-            <li><b>AI-structured study material</b> mapped to each job's qualification and syllabus</li>
-            <li>Run solo: 3 web apps, 2 APIs, 2 Flutter apps; <b>260 versioned releases</b> with rollback</li>
-            <li><b>Tutors platform</b> (live): scheduling, LiveKit online classes, quizzes, test conduct and student-group communication</li>
-            <li><b>Institute platform</b>: production-ready, awaiting deployment; seeking a launch partner</li>
-          </ul>
-          <p class="stack">React · Material UI · Flutter · Node.js · Express · MongoDB · Redis/BullMQ · Socket.io · LiveKit · Gemini · OpenAI · DeepSeek · Cloud Run · Firebase</p>
-        </div>
-        <div class="job">
-          <div class="job-head"><h3>Smart Starter &amp; Transformer Gateway (upcoming)</h3><span class="date">In design</span></div>
-          <p class="org">Connected motor control for farms sharing a transformer</p>
-          <ul>
-            <li>Smart three-phase starter per motor: ESP32-S3, dual power metering (V, I, kW, PF, phase loss/sequence), 5 kV isolation, fail-safe contactor; PCBs routed and checked</li>
-            <li>One SIM gateway per transformer controls 5–30 starters by LoRa (~5 km); app plus 5 km remote</li>
-            <li>Solves Telangana's automatic-starter problem: one-by-one starts, auto switch-off on faults, and live transformer load data for the DISCOM</li>
-          </ul>
-        </div>
-        <div class="job">
-          <div class="job-head"><h3>3D/VR planning projects</h3><span class="date">Live</span></div>
-          <p class="org">jagapathibanoth6-dotcom.github.io</p>
-          <ul>
-            <li><b>Elevated goat &amp; poultry shed:</b> 75×50 ft steel structure, true-scale 3D/VR model (phone, PC, Meta Quest), 37 design versions, bill of quantities ≈ ₹52.65 lakh</li>
-            <li><b>Future House:</b> 2,556 sq ft G+1 home with VR walkthrough, floor plans and budget</li>
-          </ul>
-          <p class="stack">Three.js · WebXR · Project planning · Cost estimation</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Operations experience</h2>
-        <div class="job">
-          <div class="job-head"><h3>Warehouse Associate — Amazon MAN1</h3><span class="date">Sep 2024 – Present</span></div>
-          <p class="org">Manchester, UK · transferred from DXM2, July 2025</p>
-          <ul>
-            <li>Zero safety incidents across two sites; consistently above productivity expectations, including peak</li>
-            <li>Cross-trained in stow, pick, pack and sort across AU, BU and UTK inventory flow</li>
-          </ul>
-        </div>
-        <div class="job">
-          <div class="job-head"><h3>General Manager Intern — Double Zero Pizzeria</h3><span class="date">Jan – Sep 2024</span></div>
-          <p class="org">Manchester, UK · MBA placement</p>
-          <ul>
-            <li>+20% sales from market research and a new menu; −15% order processing time through POS optimisation; −15% operating cost</li>
-            <li>Customer-feedback analysis with data visualisation; £20k+ supplier agreements; Lean, JIT and 5S recommendations</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <aside class="side">
-      <section>
-        <h2>Key numbers</h2>
-        <div class="kpis">
-          <div class="kpi hi"><b>1,280</b><span>active aspirants</span></div>
-          <div class="kpi"><b>71,972</b><span>practice questions</span></div>
-          <div class="kpi"><b>3</b><span>platforms: web, Android, iOS</span></div>
-          <div class="kpi"><b>37</b><span>exams mapped</span></div>
-        </div>
-      </section>
-      <section>
-        <h2>Technical skills</h2>
-        <p class="tk"><b>Languages</b> JavaScript · TypeScript · Dart · HTML5 · CSS3 · Python (NumPy, SciPy)</p>
-        <p class="tk"><b>Web</b> React · Vite · Material UI · Next.js · Tailwind CSS · PWA</p>
-        <p class="tk"><b>Mobile</b> Flutter &amp; Dart (iOS &amp; Android) · Riverpod · React Native · Expo · Xcode · App Store &amp; Google Play publishing</p>
-        <p class="tk"><b>Backend</b> Node.js · Express · Socket.io · Redis/BullMQ · LiveKit · Stripe · Twilio · SES · passkeys</p>
-        <p class="tk"><b>Data &amp; cloud</b> MongoDB · Redis · Google Cloud Run · Docker · Cloud Storage · Firebase Hosting &amp; Messaging</p>
-        <p class="tk"><b>Architecture</b> Multi-tenant SaaS · RBAC · Offline-first sync · Multilingual</p>
-        <p class="tk"><b>3D &amp; VR</b> Three.js · WebXR · Meta Quest</p>
-        <p class="tk"><b>Hardware</b> ESP32-S3 · LoRa · SPI · I2C · ATM90E32AS · PCB design</p>
-        <p class="tk"><b>AI</b> Gemini, OpenAI &amp; DeepSeek APIs with fallback and cost tracking · AI content pipelines &amp; compliance filtering · Prompt engineering · AI-assisted development · Offline / on-device models · AI assistants (e.g. Claude)</p>
-        <p class="tk"><b>Tools</b> Git &amp; GitHub · SEO &amp; structured data · Excel · Microsoft 365</p>
-      </section>
-      <section>
-        <h2>Product skills</h2>
-        <div class="tags"><span>AI-first development</span><span>Product strategy</span><span>KPI &amp; analytics design</span><span>System architecture</span><span>Multilingual UX</span><span>Cost estimation</span><span>Test planning</span></div>
-      </section>
-      <section>
-        <h2>Education</h2>
-        <div class="edu"><h3>MBA with Professional Placement</h3><p>University of Central Lancashire · 2022–2024 · 70%</p></div>
-        <div class="edu"><h3>B.Com (General)</h3><p>Osmania University (City College) · 2018–2022 · 70%</p></div>
-      </section>
-      <section>
-        <h2>Languages</h2>
-        <p style="color:var(--soft);font-size:9.4pt">English (fluent) · Telugu (native) · Hindi (fluent)</p>
-      </section>
-    </aside>
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">Founder and sole full-stack developer of Aspirants Way, an exam-preparation platform live on web, Android and iOS with <b>1,280 active users</b> and <b>71,972 practice questions</b>. I design, build and run the whole system: three React web apps, two Node.js APIs on Google Cloud Run and two Flutter apps, with <b>260 versioned releases</b>. AI-first builder using Gemini, OpenAI and DeepSeek in production. MBA graduate with Amazon fulfilment and General Manager experience, so I build with an operator's eye for KPIs, workflows and reliability.</p><div class="kpis"><div class="kpi"><b>1,280</b> <span>active users</span></div><div class="kpi"><b>71,972</b> <span>practice questions</span></div><div class="kpi"><b>260</b> <span>versioned releases</span></div><div class="kpi"><b>7</b> <span>apps built and run solo</span></div></div>
+    </section>
+    <section>
+      <h2>Experience</h2>
+      <div class="job"><div class="job-head"><h3>Founder &amp; Full-Stack Developer — Aspirants Way</h3><span class="date">Sep 2026 – Present</span></div><p class="org">aspirantsway.com · App Store · Google Play · tutor.aspirantsway.com</p><ul><li>Built and launched a free government-exam platform on <b>web, Android and iOS</b>: 1,280 active users, 71,972 practice questions and 37 exams, in English, Hindi and Telugu, with offline study</li><li><b>Architecture:</b> React + Vite + Material UI web apps (student site, 28-module admin dashboard, tutors dashboard); Node.js/Express API in Docker on <b>Google Cloud Run</b> with MongoDB, <b>Redis and BullMQ</b> job queues, Socket.io and LiveKit live video</li><li><b>Mobile:</b> rebuilt the apps from React Native/Expo in <b>Flutter</b> for iOS and Android, with offline caching and push notifications</li><li><b>AI:</b> production pipeline using <b>Gemini, OpenAI and DeepSeek</b> with provider fallback and cost tracking; automated daily current affairs filtered for accuracy, neutrality and legal compliance; AI-structured study material by job qualification</li><li><b>Security and integrations:</b> passkeys (WebAuthn), two-factor auth, JWT, rate limiting; Twilio SMS OTP, Amazon SES email, push notifications and Stripe</li><li><b>Delivery:</b> 260 versioned production releases with one-step rollback; web apps on Firebase Hosting</li><li><b>Tutors platform</b> (live): scheduling, LiveKit online classes, attendance, quizzes and tests. <b>Institute platform</b>: multi-tenant dashboard and Flutter student app with QR join, production-ready and seeking a launch partner</li></ul></div><div class="job"><div class="job-head"><h3>Warehouse Associate — Amazon</h3><span class="date">Sep 2024 – Present</span></div><p class="org">Amazon MAN1, Manchester, UK · voluntary transfer from Amazon DXM2, July 2025</p><ul><li><b>Zero safety incidents</b> across two fulfilment centres; consistently above productivity expectations, including peak</li><li>Cross-trained in stow, pick, pack and sort across AU, BU and UTK inventory flows</li></ul></div><div class="job"><div class="job-head"><h3>General Manager Intern (MBA Placement) — Double Zero Pizzeria</h3><span class="date">Jan 2024 – Sep 2024</span></div><p class="org">Manchester, UK</p><ul><li><b>+20% sales</b> from market research and a new menu; <b>−15% order processing time</b> through POS optimisation; <b>−15% operating costs</b></li><li>Customer-feedback analysis with data visualisation; £20k+ supplier agreements; Lean, Just-in-Time and 5S recommendations</li></ul></div>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <div class="job"><div class="job-head"><h3>Smart Starter &amp; Transformer Gateway (in design)</h3><span class="date">Embedded / IoT</span></div><p class="org">Connected motor control for farms sharing a transformer</p><ul><li>Smart three-phase starter per motor: ESP32-S3, dual power metering (ATM90E32AS), 5 kV isolation, fail-safe contactor; PCBs routed and checked</li><li>One SIM gateway per transformer controls 5–30 starters by LoRa (~5 km): sequenced starts, auto switch-off on faults, app and 5 km remote control, live load data for the electricity distributor</li></ul></div><div class="job"><div class="job-head"><h3>3D/VR Planning Projects</h3><span class="date">Live online</span></div><p class="org">jagapathibanoth6-dotcom.github.io</p><ul><li>Elevated livestock shed (75×50 ft steel, 37 design versions, bill of quantities ≈ ₹52.65 lakh) and a 2,556 sq ft home, as true-scale Three.js + WebXR models that run on phone, PC and Meta Quest</li></ul></div>
+    </section>
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills"><p><b>Languages:</b> JavaScript · TypeScript · Dart · HTML5 · CSS3 · Python (NumPy, SciPy)</p><p><b>Frontend:</b> React · Vite · Material UI · Next.js · Tailwind CSS · KaTeX · Progressive web apps</p><p><b>Mobile:</b> Flutter (iOS and Android) · Riverpod · React Native · Expo · Xcode · App Store and Google Play publishing</p><p><b>Backend:</b> Node.js · Express · REST APIs · Socket.io · Redis · BullMQ · LiveKit · Stripe · Twilio · Amazon SES · WebAuthn passkeys · JWT</p><p><b>Data and cloud:</b> MongoDB (Mongoose) · Redis · Google Cloud Run · Docker · Google Cloud Storage · Firebase Hosting and Cloud Messaging</p><p><b>AI:</b> Gemini, OpenAI and DeepSeek APIs · LLM fallback and cost tracking · AI content pipelines · Prompt engineering · On-device models · AI coding assistants</p><p><b>Architecture and practice:</b> Multi-tenant SaaS · Role-based access control · Offline-first sync · Multilingual products · Versioned releases and rollback · Git and GitHub</p><p><b>Hardware and 3D:</b> ESP32-S3 · LoRa · SPI · I2C · PCB design · Three.js · WebXR</p><p><b>Product:</b> Product strategy · KPI and analytics design · System architecture · Cost estimation · Test planning</p></div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="edu"><p><b>MBA with Professional Placement</b> — University of Central Lancashire, Preston, UK</p><span class="date">2022 – 2024 · 70%</span></div><div class="edu"><p><b>Bachelor of Commerce (General)</b> — Osmania University (City College), Hyderabad, India</p><span class="date">2018 – 2022 · 70%</span></div>
+    </section>
+    <section>
+      <h2>Languages</h2>
+      <p class="summary">English (fluent) · Telugu (native) · Hindi (fluent)</p>
+    </section>
   </div>
-  <footer><span>Jagapathi Nayak Banoth · jagapathibanoth6-dotcom.github.io/Jagapathi-Portfolio</span><span>Updated November 2026</span></footer>
+  <footer><span>Jagapathi Nayak Banoth · jagapathibanoth6@gmail.com · +44 7867 035864</span><span>Updated November 2026</span></footer>
 </main>
 <script>
 { const b = document.getElementById('printBtn'); b.addEventListener('click', () => { try { window.print(); } catch (e) {} }); }
 </script>
 </body>
+</html>
