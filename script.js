@@ -53,7 +53,7 @@
       if (e.isIntersecting) { e.target.classList.add('in'); rev.unobserve(e.target); }
     }), { threshold: .1, rootMargin: '0px 0px -30px 0px' });
     $$('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 60 + 'ms'; rev.observe(el); });
-    setTimeout(() => $$('.reveal').forEach(el => el.classList.add('in')), 4000);
+    setTimeout(() => $$('.reveal').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }), 4000);
     window.addEventListener('beforeprint', () => $$('.reveal').forEach(el => el.classList.add('in')));
   }
 
@@ -63,7 +63,7 @@
     const plan = [
       ['.kpi', 'pop'], ['.job', 'slide-left'], ['.proj', 'flip'], ['.skill', 'zoom'],
       ['.techskills', 'slide-right'], ['.lp', 'rise'], ['.edu', 'blur'], ['.target', 'rise'],
-      ['.sub-title', 'curtain'], ['.form', 'rise'], ['.c-list', 'slide-left'], ['.factbar li', 'rise']
+      ['.sub-title', 'slide-right'], ['.form', 'rise'], ['.c-list', 'slide-left'], ['.factbar li', 'rise']
     ];
     const animEls = [];
     plan.forEach(([sel, kind]) => $$(sel).forEach((el, i) => {
@@ -83,7 +83,7 @@
       if (e.isIntersecting) { const t = e.target; t.classList.add('in'); animObs.unobserve(t); setTimeout(() => t.classList.add('done'), 1600); }
     }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
     animEls.forEach(el => animObs.observe(el));
-    setTimeout(() => animEls.forEach(el => { el.classList.add('in'); setTimeout(() => el.classList.add('done'), 1600); }), 6000);
+    // No blanket timeout: each card animates only when scrolled into view (IntersectionObserver).
     window.addEventListener('beforeprint', () => animEls.forEach(el => el.classList.add('in')));
   }
 
