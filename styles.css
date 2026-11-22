@@ -575,3 +575,6 @@ strong,b{color:var(--ink)}
 @media print{.sec::before{display:none}.sec .kpi b,.sec .when,.sec .techskills dt,.sec .lp dt,.sec .edu-grade{color:#0b6b55!important;text-shadow:none}.sec .num{color:#0b6b55;background:#e8f3ef;box-shadow:none}}
 .sec::before{background:radial-gradient(560px 170px at 22% 190px,rgba(var(--sa),.10),transparent 100%)}
 .sec::before{background:radial-gradient(520px 170px at 45% 190px,rgba(var(--sa),.10),transparent 100%)}
+html{overflow-x:clip}
+.sec::before{inset:-40px 0}
+@media (min-width:1100px){.sec::before{inset:-40px -8vw}}
