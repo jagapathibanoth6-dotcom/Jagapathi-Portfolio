@@ -636,3 +636,4 @@ html{overflow-x:clip}
 @media(max-width:720px){.ft-top{gap:18px 16px}}
 @media(max-width:520px){.ft-top .ft-col:last-child{grid-column:auto}}
 .ft-copy{padding:6px 0 8px;font-size:12px;line-height:1.4}
+.layout{padding-bottom:0!important}
