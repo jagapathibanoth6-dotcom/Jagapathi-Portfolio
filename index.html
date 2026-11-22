@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=13.1">
+<link rel="stylesheet" href="styles.css?v=13.2">
 
 <script type="application/ld+json">
 {
@@ -50,7 +50,7 @@
       { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MBA with Professional Placement", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Central Lancashire" } },
       { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Bachelor of Commerce (General)", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Osmania University" } }
     ],
-    "knowsAbout": ["Warehouse operations","Fulfilment","Inbound and outbound logistics","Inventory management","Health and safety","KPI management","Lean","5S","Just-in-time","Value stream mapping","Process improvement","Team leadership","Supplier negotiation","Cost control","Data analysis","Microsoft Excel","React","Next.js","Firebase","3D modelling","Three.js","WebXR","Cost estimation","Bill of quantities","PCB design","IoT","ESP32","JavaScript","TypeScript","Python","Swift","Flutter","Dart","React Native","Expo","Node.js","Express","MongoDB","Socket.io","Tailwind CSS","LoRa","Multi-tenant SaaS","Progressive web apps","Prompt engineering","AI-assisted development","On-device AI models"],
+    "knowsAbout": ["Warehouse operations","Fulfilment","Inbound and outbound logistics","Inventory management","Health and safety","KPI management","Lean","5S","Just-in-time","Value stream mapping","Process improvement","Team leadership","Supplier negotiation","Cost control","Data analysis","Microsoft Excel","React","Next.js","Firebase","3D modelling","Three.js","WebXR","Cost estimation","Bill of quantities","PCB design","IoT","ESP32","JavaScript","TypeScript","Python","Flutter","Dart","React Native","Expo","Node.js","Express","MongoDB","Socket.io","Redis","BullMQ","Google Cloud Run","Docker","Google Cloud Storage","LiveKit","Google Gemini API","OpenAI API","DeepSeek API","Stripe","Twilio","Amazon SES","WebAuthn passkeys","Material UI","Vite","Tailwind CSS","LoRa","Multi-tenant SaaS","Progressive web apps","Prompt engineering","AI-assisted development","On-device AI models"],
     "knowsLanguage": ["English","Telugu","Hindi"],
     "sameAs": ["https://www.linkedin.com/in/jagapathinayakbanoth","https://github.com/jagapathibanoth6-dotcom"]
   }
@@ -269,10 +269,11 @@
           <li>Launched <b>Aspirants Way</b> on the web, Android (Google Play) and iOS (App Store): <b>1,280 active aspirants</b>, <b>71,972 practice questions</b> and <b>37 exams</b>, in English, Hindi and Telugu, with offline study</li>
           <li>Launched the <b>Aspirants Way Tutors platform</b>: schedule management, online classes, quizzes, tests and group communication for Aspirants Way tutors</li>
           <li>Built the <b>Aspirants Way Institute platform</b>, a separate multi-tenant system for coaching-institute management, built and ready for production deployment, and open to launch partners</li>
+          <li>Run the whole stack solo: <b>3 web apps</b> (student site, admin dashboard, tutors dashboard), <b>2 back-end APIs</b> and <b>2 Flutter apps</b>, with <b>260 versioned production releases</b> and one-step rollback</li>
           <li>Designed an <b>AI pipeline for daily current affairs</b> with fact, neutrality and legal-compliance filtering, and AI-structured study material mapped to each job's qualification</li>
           <li>Built every product <b>AI-first</b>: using AI assistants, prompt engineering and on-device models to design, code, test and document faster and to a professional standard</li>
         </ul>
-        <p class="kw"><span>Skills:</span> Product management · Mobile apps (Android &amp; iOS) · KPI systems · Scheduling &amp; communication tools · Multi-tenant architecture · React · Swift · Flutter · Next.js · Node.js · Firebase · MongoDB</p>
+        <p class="kw"><span>Skills:</span> Product management · Mobile apps (Android &amp; iOS) · KPI systems · Scheduling &amp; communication tools · Multi-tenant architecture · React · Flutter · Node.js · MongoDB · Redis · Google Cloud Run · Gemini / OpenAI APIs</p>
       </article>
     </section>
 
@@ -286,12 +287,13 @@
             <li>Exams: SSC, Banking, Railways, Police &amp; defence, UPSC &amp; State PSC, and Teaching (TET, CTET, DSC)</li>
             <li><b>AI-automated daily current affairs:</b> a pipeline that gathers each day's news, filters out incorrect, unverified, opinionated and legally non-compliant content, and publishes neutral, exam-relevant articles in all three languages</li>
             <li><b>AI-structured study material</b> built around each job's qualification and syllabus, with a daily plan and a weekly timetable that works around busy hours</li>
+            <li><b>Admin dashboard</b> with 28+ modules: users, question bank, study materials, current affairs, publish and approval queues, analytics, AI and API key management, and a built-in mailbox</li>
             <li>Exam-style tests with timer, question palette, mark-for-review and step-by-step solutions</li>
             <li>Live quizzes with shuffled questions, rank and leaderboard; daily current affairs with six months of history</li>
             <li>Recruitment updates, job-wise discussion rooms and analytics with 7-test trends</li>
             <li>Offline sync: study and take tests without constant internet; progress uploads on reconnect</li>
           </ul>
-          <p class="kw"><span>Tech:</span> React · Swift (iOS) · Flutter · Node.js · Express · MongoDB · Socket.io</p>
+          <p class="kw"><span>Tech:</span> React · Vite · Material UI · Flutter (iOS &amp; Android) · Node.js · Express · MongoDB · Redis &amp; BullMQ · Socket.io · LiveKit · Google Gemini · OpenAI · DeepSeek · Google Cloud Run · Firebase Hosting</p>
           <div class="links">
             <a class="btn btn-primary btn-sm" href="https://www.aspirantsway.com/" target="_blank" rel="noopener">Visit aspirantsway.com ↗</a>
             <a class="btn btn-outline btn-sm" href="https://apps.apple.com/gb/app/aspirants-way/id6812630753" target="_blank" rel="noopener">App Store (iOS) ↗</a>
@@ -302,7 +304,8 @@
         <article class="proj reveal">
           <div class="proj-head"><img src="aw-logo.jpg" loading="lazy" decoding="async" alt="Aspirants Way logo" width="52" height="52"><div><h3>Aspirants Way — Tutors Platform</h3><p class="status live">Live · for Aspirants Way tutors</p></div></div>
           <p>The platform tutors use to teach on Aspirants Way: everything needed to run classes and student groups in one place.</p>
-          <ul><li>Schedule management and online class delivery</li><li>Quizzes and test conduct, with results and performance tracking</li><li>Communication management for Aspirants Way student groups</li></ul>
+          <ul><li>Schedule management and live online classes (LiveKit video) with attendance</li><li>Quizzes and test conduct, with results and performance tracking</li><li>Communication management for Aspirants Way student groups</li></ul>
+          <p class="kw"><span>Tech:</span> React · Material UI · LiveKit · Socket.io · Node.js · MongoDB</p>
           <div class="links">
             <a class="btn btn-primary btn-sm" href="https://www.tutor.aspirantsway.com" target="_blank" rel="noopener">Visit tutor.aspirantsway.com ↗</a>
           </div>
@@ -310,12 +313,12 @@
         <article class="proj proj-partner reveal">
           <div class="proj-head"><img src="aw-logo.jpg" loading="lazy" decoding="async" alt="Aspirants Way logo" width="52" height="52"><div><h3>Aspirants Way — Institute Platform</h3><p class="status build">Production-ready · Launching with a partner</p></div></div>
           <p>A separate platform for coaching institutes to manage their centres: enrol students, run batches, assign tests and track performance with cohort comparisons and reporting. Multi-tenant design keeps each institute's data separate.</p>
-          <ul><li>Role-based dashboards: super admin, operations manager, institute, student</li><li>Institute-scoped tests, attempts and reports</li></ul>
+          <ul><li>Role-based dashboards: super admin, operations manager, institute, student</li><li>Student management with CSV bulk import, batches, auto-ranked quizzes, attendance and study rooms</li><li><b>My Institute</b> student app (Flutter, iOS &amp; Android): students join their institute by QR code</li><li>Institute-scoped tests, attempts and reports</li></ul>
           <div class="partner">
             <b>Partnership opportunity</b>
             <p>The platform is built and ready for production deployment. I'm looking for partners or investors to fund its launch and promotion and run day-to-day operations, with full technical support from me as a priority.</p>
           </div>
-          <p class="kw"><span>Tech:</span> React · Express · Firebase · Multi-tenant architecture</p>
+          <p class="kw"><span>Tech:</span> React · Material UI · Flutter · Node.js · Express · MongoDB · Redis · Multi-tenant architecture</p>
           <div class="links">
             <a class="btn btn-primary btn-sm" href="mailto:jagapathibanoth6@gmail.com?subject=Aspirants%20Way%20Institute%20Platform%20%E2%80%94%20partnership" >Discuss partnership</a>
           </div>
@@ -392,16 +395,16 @@
       <div class="techskills reveal" id="tech-skills">
         <h3>Technical Skills</h3>
         <dl>
-          <div><dt>Languages</dt><dd>JavaScript · TypeScript · Swift · Dart · HTML5 · CSS3 · Python (NumPy, SciPy)</dd></div>
-          <div><dt>Frontend &amp; web</dt><dd>React · Next.js · Tailwind CSS · Responsive design · Progressive web apps (PWA) · Charts &amp; dashboards · PDF export</dd></div>
-          <div><dt>Mobile</dt><dd>Swift (native iOS) · Flutter &amp; Dart (Android and iOS) · React Native · Expo · Xcode · Android app (Google Play) · iOS app (App Store) · App store publishing</dd></div>
-          <div><dt>Backend &amp; APIs</dt><dd>Node.js · Express · REST APIs · Socket.io (real-time) · OTP authentication (email &amp; mobile)</dd></div>
-          <div><dt>Databases &amp; cloud</dt><dd>MongoDB · Firebase (Authentication, Firestore, Storage, Cloud Functions, push notifications) · GitHub Pages hosting</dd></div>
-          <div><dt>Architecture</dt><dd>Multi-tenant SaaS · Role-based access control · Offline-first sync · Multilingual content (English, Hindi, Telugu) · Live quizzes &amp; leaderboards · KPI &amp; analytics design</dd></div>
+          <div><dt>Languages</dt><dd>JavaScript · TypeScript · Dart · HTML5 · CSS3 · Python (NumPy, SciPy)</dd></div>
+          <div><dt>Frontend &amp; web</dt><dd>React · Vite · Material UI · Next.js · Tailwind CSS · KaTeX maths rendering · Responsive design · Progressive web apps (PWA) · Charts &amp; dashboards · PDF export</dd></div>
+          <div><dt>Mobile</dt><dd>Flutter &amp; Dart (Android and iOS) · Riverpod · React Native · Expo · Xcode · Android Studio · Push notifications · App Store &amp; Google Play publishing</dd></div>
+          <div><dt>Backend &amp; APIs</dt><dd>Node.js · Express · REST APIs · Socket.io (real-time) · Redis &amp; BullMQ job queues · Scheduled jobs · LiveKit live video · Stripe payments · Twilio SMS OTP · Amazon SES email · Web &amp; app push</dd></div>
+          <div><dt>Databases &amp; cloud</dt><dd>MongoDB (Mongoose) · Redis · Google Cloud Run · Docker · Google Cloud Storage · Firebase (Hosting, Cloud Messaging, Functions) · GitHub Pages</dd></div>
+          <div><dt>Architecture</dt><dd>Multi-tenant SaaS · Role-based access control · Passkeys (WebAuthn), two-factor auth &amp; JWT · Rate limiting · Offline-first sync · Multilingual content (English, Hindi, Telugu) · Live quizzes &amp; leaderboards · KPI &amp; analytics design</dd></div>
           <div><dt>3D &amp; VR</dt><dd>Three.js · WebXR · True-scale 3D modelling · VR walkthroughs (Meta Quest 3S)</dd></div>
           <div><dt>Embedded &amp; hardware</dt><dd>ESP32-S3 · LoRa (SX1262) · SPI · I2C · Power-metering ICs (ATM90E32AS) · PCB schematic &amp; layout design · Isolation &amp; electrical safety · Bring-up &amp; test planning</dd></div>
-          <div><dt>AI</dt><dd>AI content pipelines (automated daily current affairs with accuracy, neutrality and legal-compliance filtering) · AI-structured study material · AI-assisted software, hardware and 3D development · Prompt engineering · Running offline / on-device AI models · AI agents and assistants (e.g. Claude) for research, coding, testing and documentation</dd></div>
-          <div><dt>Tools &amp; practice</dt><dd>Git &amp; GitHub · SEO &amp; structured data · llms.txt for AI search · Technical documentation · Version-controlled design iteration</dd></div>
+          <div><dt>AI</dt><dd>Multi-provider LLM integration (Google Gemini, OpenAI GPT, DeepSeek) with fallback and cost tracking · AI content pipelines (automated daily current affairs with accuracy, neutrality and legal-compliance filtering) · AI-structured study material · AI-assisted software, hardware and 3D development · Prompt engineering · Running offline / on-device AI models · AI agents and assistants (e.g. Claude) for research, coding, testing and documentation</dd></div>
+          <div><dt>Tools &amp; practice</dt><dd>Git &amp; GitHub · Release pipeline with versioning &amp; rollback (260 production releases) · SEO &amp; structured data · llms.txt for AI search · Technical documentation · Version-controlled design iteration</dd></div>
         </dl>
       </div>
       <div class="lp reveal">
