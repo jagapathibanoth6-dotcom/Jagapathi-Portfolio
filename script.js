@@ -107,6 +107,19 @@
     requestAnimationFrame(frame);
   }
 
+
+  /* Giant footer name: fit "Jagapathi" to the full width */
+  const giant = document.getElementById('ftGiant');
+  if (giant) {
+    const fit = () => {
+      const box = giant.parentElement; giant.style.fontSize = '100px';
+      const w = giant.getBoundingClientRect().width;
+      giant.style.fontSize = (100 * box.clientWidth / w * 0.96) + "px";
+    };
+    fit(); window.addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+
   /* Reading progress */
   const progress = $('#progress');
   const onScroll = () => {

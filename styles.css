@@ -607,3 +607,10 @@ html{overflow-x:clip}
 @media(max-width:900px){.ft-top{grid-template-columns:1fr 1fr 1fr}.ft-brand{grid-column:1/-1}}
 @media(max-width:520px){.ft-top{grid-template-columns:1fr 1fr;gap:28px}.ft-col:last-child{grid-column:1/-1}}
 @media print{.ft-top .ft-col,.ft-top .btn,.ft-up{display:none!important}.ft-name{color:#000;font-size:20px}.ft-name span{color:#000;background:none}}
+/* ===== Giant cut-off name at the bottom of the footer ===== */
+.foot{padding-bottom:0;overflow:visible}
+.ft-giant{width:100vw;margin:28px 0 0 calc(50% - 50vw);height:clamp(70px,13vw,230px);overflow:hidden;display:flex;justify-content:center;align-items:flex-start;pointer-events:none;user-select:none}
+.ft-giant span{display:block;width:max-content;flex-shrink:0;font:900 100px/0.82 var(--head);letter-spacing:-.05em;white-space:nowrap;
+  background:linear-gradient(180deg,rgba(74,222,155,.9) 0%,rgba(45,212,191,.55) 40%,rgba(96,165,250,.08) 75%,transparent 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+@media print{.ft-giant{display:none}}
