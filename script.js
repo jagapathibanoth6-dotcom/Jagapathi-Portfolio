@@ -63,7 +63,7 @@
     const plan = [
       ['.kpi', 'pop'], ['.job', 'slide-left'], ['.proj', 'flip'], ['.skill', 'zoom'],
       ['.techskills', 'slide-right'], ['.lp', 'rise'], ['.edu', 'blur'], ['.target', 'rise'],
-      ['.sub-title', 'curtain'], ['.form', 'rise'], ['.c-list', 'slide-left'], ['.profile', 'blur']
+      ['.sub-title', 'curtain'], ['.form', 'rise'], ['.c-list', 'slide-left'], ['.factbar li', 'rise']
     ];
     const animEls = [];
     plan.forEach(([sel, kind]) => $$(sel).forEach((el, i) => {
@@ -89,7 +89,7 @@
 
   /* Mouse-follow glare on cards */
   if (!reduced && matchMedia('(hover:hover) and (pointer:fine)').matches) {
-    $$('.kpi,.job,.proj,.skill,.edu,.techskills,.lp,.form,.profile,.certs li').forEach(card => {
+    $$('.kpi,.job,.proj,.skill,.edu,.techskills,.lp,.form,.certs li').forEach(card => {
       card.classList.add('glare');
       card.addEventListener('pointermove', e => {
         const r = card.getBoundingClientRect();
